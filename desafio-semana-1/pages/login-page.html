@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+
+    <link rel="shortcut icon" href="/assets/images/logo.svg" type="image/x-icon">
     <title>login Page</title>
-    
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/login-page.css">
 </head>
+
 <body>
     <header class="login-c">
         <!--Inserir Cabeçalho-->
     </header>
-    
 
+
+    <section class="sec aling-center justify-center" id="login">
+        <div class="content aling-left">
+            <div class="columns">
+                <div class="column max-column justify-center gap-min">
+                    <h2 class="title">Login to Your Account</h2>
+                    <p class="text">Enter your credentials to access your account</p>
+                </div>
+                <div class="column max-column">
+                    <form action="/login" method="POST" onsubmit="window.location.href='/pages/kanban-page.html'; return false;">
+                        <div class="group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <span class="alert-form"></span>
+                        </div>
+                        
+                        <div class="group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password">
+                            <span class="alert-form"></span>
+                        </div>
+    
+                        <button class="button butt-norm" type="submit">Login</button>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
 
@@ -30,4 +60,5 @@
     <script src="assets/js/login.js"></script>
 
 </body>
+
 </html>
