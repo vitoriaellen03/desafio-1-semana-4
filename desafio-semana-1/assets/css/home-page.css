@@ -37,3 +37,11 @@
 .alert-form.error  {
     color: red;
 }
+
+.home-m {
+    background: var(---second-color);
+}
+
+.home-m .text {
+    color: var(---withe);
+}
