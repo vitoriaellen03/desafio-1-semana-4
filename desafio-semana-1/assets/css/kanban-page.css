@@ -1,10 +1,108 @@
 #kanban {
-    height: 100vh;
+    flex-grow: 1;
     background: rgba(0, 0, 0, 0.1);
     padding: 60px;
 }
 
 #kanban .column {
     background: var(---withe);
-    height: 10vh;
+    flex-grow: 1;
+}
+
+
+.justify-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    
+
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.kanban-column {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 240px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.kanban-card p {
+    margin: 5px 0;
+}
+
+.kanban-card strong {
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Níveis de prioridade */
+.kanban-card p strong {
+    display: inline-block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kanban-card p strong:before {
+    content: 'Priority: ';
+}
+
+.kanban-card .tags {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.kanban-card .tags span {
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+/* Cores de prioridade */
+.kanban-card p strong {
+    background-color: #ff6b6b;
+}
+
+.kanban-card p strong:contains('Mid') {
+    background-color: #feca57;
+}
+
+.kanban-card p strong:contains('Low') {
+    background-color: #1dd1a1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    #kanban {
+        padding: 20px;
+    }
+
+    .kanban-board {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .kanban-column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }

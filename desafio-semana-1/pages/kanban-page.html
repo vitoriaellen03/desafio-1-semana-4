@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
     <title>Kanban Page</title>
-    
+
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/kanban-page.css">
 </head>
+
 <body>
     <header class="kanban-c">
         <!--Inserir Cabeçalho-->
     </header>
-    
 
-    <section class="sec aling-center justify-center" id="kanban">
-        <div class="columns">
-            <div class="column">
-                <h2 class="title">To do</h2>
-                <div class="cards-table">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+
+    <section class="sec" id="kanban">
+        <div class="kanban-board">
+            <!-- Coluna To Do -->
+            <div class="kanban-column" id="to-do">
+                <h2>To Do</h2>
+
+                <div class="kanban-card">
+                    <p><strong>High</strong> | Oct 16, 24</p>
+                    <p>Create app</p>
+                    <div class="tags">
+                        <span>IT</span> <span>JS</span> <span>NS</span> <span>LC</span> <span>GM</span>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <p><strong>Mid</strong> | Oct 09, 24</p>
+                    <p>Train for the project</p>
+                    <div class="tags">
+                        <span>NS</span> <span>GM</span>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <p><strong>Low</strong> | Oct 06, 24</p>
+                    <p>Make popcorn</p>
+                    <div class="tags">
+                        <span>GM</span>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <h2 class="title">In progress</h2>
-                <div class="cards-table">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+
+            <!-- Coluna In Progress -->
+            <div class="kanban-column" id="in-progress">
+                <h2>In Progress</h2>
+
+                <div class="kanban-card">
+                    <p><strong>High</strong> | Oct 08, 24</p>
+                    <p>Debug error</p>
+                    <div class="tags">
+                        <span>IT</span> <span>JS</span> <span>NS</span> <span>LC</span> <span>GM</span>
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <h2 class="title">Complete</h2>
-                <div class="cards-table">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+
+            <!-- Coluna Complete -->
+            <div class="kanban-column" id="complete">
+                <h2>Complete</h2>
+
+                <div class="kanban-card">
+                    <p><strong>Low</strong> | Apr 02, 21</p>
+                    <p>Eat a sandwich</p>
+                    <div class="tags">
+                        <span>GM</span>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <p><strong>Mid</strong> | Jan 28, 86</p>
+                    <p>Drink water</p>
+                    <div class="tags">
+                        <span>GM</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <footer class="kanban-f">
         <!--Inserir Footer-->
@@ -53,8 +91,9 @@
 
 
     <!--Inserindo JS-->
-    <script src="assets/js/global.js"></script>
-    <script src="assets/js/kanban.js"></script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/kanban.js"></script>
 
 </body>
+
 </html>
