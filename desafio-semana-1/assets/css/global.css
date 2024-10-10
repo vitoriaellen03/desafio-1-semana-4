@@ -6,7 +6,16 @@
     ---emphasis: rgba(252, 244, 182);
     ---emphasis-content: rgba(252, 244, 182, 0.5);
     ---button: #CB4F57;
+    ---orange: #EB9961;
+    ---pink: #F8F2FF;
+    ---pink-or:#CB4F57;
+    ---pink-ye: #EB9961;
+    ---yelow: #FCF4B6;
+    ---close: #FF746A;
 }
+
+/*Importando fontes*/
+
 
 /*Zerando CSS*/
 * {
@@ -43,6 +52,9 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+
+
 
 
 
@@ -228,15 +240,13 @@ img {
     justify-content: space-between;
     font-size: 16px;
     line-height: 24px;
+    max-height: 80px;
+    align-items: center;
 }
 
 
 .menu, .navbar > .column {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;
     gap: 10px;
     color: var(---withe);
@@ -262,6 +272,7 @@ img {
 .nav-menu {
     display: flex;
     align-items: center;
+    height: 36px;
 }
 
 .navbar > .column {
@@ -383,4 +394,23 @@ footer .social img {
     align-items: center;
     gap: 20px;
     text-decoration: none;
+}
+
+.alert {
+    background: #000;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+.sucess {
+    background: green;
+}
+.error {
+    background: red;
 }

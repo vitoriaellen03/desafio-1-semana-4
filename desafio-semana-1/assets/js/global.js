@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("/assets/html/header.html")
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Erro ao carregar o header.");
+                    throw new Error("Error load header.");
                 }
                 return response.text();
             })
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("/assets/html/footer.html")
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Erro ao carregar o footer.");
+                    throw new Error("Error load footer.");
                 }
                 return response.text();
             })
@@ -35,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 });
+
