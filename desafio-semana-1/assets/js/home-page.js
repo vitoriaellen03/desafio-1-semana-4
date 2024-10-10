@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
             successfulAlert.textContent = "Successful registration!";
             
             // Exibir o alert por 5 segundos
-            successfulAlert.style.display = "absolute";
+            successfulAlert.style.display = "block";
             
             setTimeout(function() {
                 successfulAlert.style.display = "none";
