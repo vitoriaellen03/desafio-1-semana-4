@@ -15,12 +15,12 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-    
+
 
 .kanban-board {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 60px;
 }
 
 .kanban-column {
@@ -28,68 +28,117 @@
     border-radius: 10px;
     padding: 15px;
     min-width: 240px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 626px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    height: 596px;
 }
 
 .kanban-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(---pink);
+    border: 1px solid var(---primary-color);
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 15px;
+
+    width: 200px;
+    height: 127px;
+    min-width: 200px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.kanban-card p {
-    margin: 5px 0;
+
+.title {
+    font-size: 24px;
+    line-height: 24px;
 }
 
-.kanban-card strong {
-    padding: 3px 8px;
-    border-radius: 5px;
+
+.kanban-card .priority {
+    border-radius: 100px;
     color: white;
-    font-size: 0.9em;
+    border: 1px solid;
+    padding: 3px 4px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Níveis de prioridade */
-.kanban-card p strong {
+.kanban-card .priority {
     display: inline-block;
-    font-size: 0.8em;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 0.5px;
-}
-
-.kanban-card p strong:before {
-    content: 'Priority: ';
 }
 
 .kanban-card .tags {
     display: flex;
-    gap: 5px;
-    margin-top: 10px;
+    gap: 2px;
+    overflow: hidden;
 }
 
 .kanban-card .tags span {
-    background-color: #ddd;
-    padding: 5px 10px;
+    overflow: hidden;
+    height: 25px;
+    width: 25px;
+    background: #ddd;
+    padding: 5px;
     border-radius: 20px;
-    font-size: 0.8em;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(---withe);
 }
 
-/* Cores de prioridade */
-.kanban-card p strong {
-    background-color: #ff6b6b;
+
+/* Estilos para High, Mid e Low */
+.kanban-card .priority.high {
+    background: var(---button);
+    color: var(---primary-color);
+    border-color: var(---primary-color);
 }
 
-.kanban-card p strong:contains('Mid') {
-    background-color: #feca57;
+.kanban-card .priority.mid {
+    background: var(---orange);
+    color: var(---pink-or);
+    border-color: var(---pink-or);
 }
 
-.kanban-card p strong:contains('Low') {
-    background-color: #1dd1a1;
+.kanban-card .priority.low {
+    background: var(---yelow);
+    color: var(---pink-ye);
+    border-color: var(---pink-ye);
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    line-height: 24px;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
 
     #kanban {
         padding: 20px;
@@ -105,4 +154,61 @@
         width: 90%;
         margin-bottom: 20px;
     }
+
+
+    .cards-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .kanban-card {
+        width: 100%;
+    }
+
+    .kanban-board {
+        gap: 20px;
+    }
+
+}
+
+
+.task-desc {
+    color: var(---primary-color);
+    font-size: 12px;
+    font-weight: 800;
+
+}
+
+.date {
+    color: #00000080;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+.line {
+    width: 100%;
+    height: 4px;
+    background: var(---close);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    border-radius: 100px;
+}
+
+.line1 {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.line2 {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.close {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }

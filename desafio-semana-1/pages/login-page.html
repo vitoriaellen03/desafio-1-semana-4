@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/login-page.css">
+    <link rel="stylesheet" href="/assets/css/global-font.css">
 </head>
 
 <body>
@@ -26,16 +27,16 @@
                     <p class="text">Enter your credentials to access your account</p>
                 </div>
                 <div class="column max-column">
-                    <form action="/login" method="POST" onsubmit="window.location.href='/pages/kanban-page.html'; return false;">
+                    <form action="/login" method="post">
                         <div class="group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
                             <span class="alert-form"></span>
                         </div>
                         
                         <div class="group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Enter your password">
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
                             <span class="alert-form"></span>
                         </div>
     
@@ -48,6 +49,7 @@
     </section>
     
 
+    <span class="alert"></span>
 
 
     <footer class="login-f">
@@ -57,7 +59,7 @@
 
     <!--Inserindo JS-->
     <script src="/assets/js/global.js"></script>
-    <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/login-page.js"></script>
 
 </body>
 
