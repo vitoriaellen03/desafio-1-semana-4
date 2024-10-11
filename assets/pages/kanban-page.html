@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/images/logo.svg" type="image/x-icon">
+    <title>Kanban Page</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/kanban-page.css">
+    <link rel="stylesheet" href="/assets/css/global-font.css">
+</head>
+
+<body>
+    <header class="kanban-c">
+        <nav class="navbar columns">
+            <div class="logo column">
+                <a href="/">
+                    <img src="/assets/images/logo.svg" alt="Logo">
+                    <h2 class="title">Project Manager</h2>
+                </a>
+            </div>
+
+            <div class="column menu">
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li>
+                        <div class="search">
+                            <input type="text" placeholder="Search in site">
+                            <i class="icon-search">
+                                <img src="/assets/images/ic-search.png" alt="icon search">
+                            </i>
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="hamburger default"></div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class="sec" id="kanban">
+        <div class="kanban-board">
+            <!-- Coluna To Do -->
+            <div class="kanban-column" id="to-do">
+                <h2 class="title">To Do</h2>
+                <div class="cards-column" id="to-do-cards"></div>
+            </div>
+
+            <!-- Coluna In Progress -->
+            <div class="kanban-column" id="in-progress">
+                <h2 class="title">In Progress</h2>
+                <div class="cards-column" id="in-progress-cards"></div>
+            </div>
+
+            <!-- Coluna Complete -->
+            <div class="kanban-column" id="complete">
+                <h2 class="title">Complete</h2>
+                <div class="cards-column" id="complete-cards"></div>
+            </div>
+        </div>
+    </section>
+
+    <span class="alert"></span>
+
+
+    <footer class="home-f">
+        <div class="columns">
+            <div class="column group-social">
+                <a href="http://facebook.com" class="social" target="_blank" aria-label="Facebook">
+                    <img src="/assets/images/facebook-i-f.svg" alt="Logo facebook" class="icon">
+                </a>
+                <a href="http://instagram.com" class="social" target="_blank" aria-label="Instagram">
+                    <img src="/assets/images/instagram-i-f.svg" alt="Logo instagram" class="icon">
+                </a>
+                <a href="https://www.linkedin.com/in/vitoriaellen03" class="social" target="_blank"
+                    aria-label="LinkedIn">
+                    <img src="/assets/images/linkedin-i-f.svg" alt="Logo linkedin" class="icon">
+                </a>
+            </div>
+            <div class="column">
+                <p class="text">&copy; 2024 Project Manager. All rights reserved.</p>
+            </div>
+            <div class="column">
+                <a href="/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="/" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Inserindo JS-->
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/kanban-page.js"></script>
+
+</body>
+
+</html>
