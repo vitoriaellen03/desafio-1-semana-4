@@ -1,5 +1,5 @@
 .image-i-i {
-    background: var(---primary-color);
+    background: var(--primary-color);
     width: 100px;
     height: 100px;
     border-radius: 200px;
@@ -39,9 +39,9 @@
 }
 
 .home-m {
-    background: var(---second-color);
+    background: var(--second-color);
 }
 
 .home-m .text {
-    color: var(---withe);
+    color: var(--withe);
 }
