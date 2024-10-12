@@ -1,3 +1,4 @@
+// Dynamic cards
 document.addEventListener("DOMContentLoaded", function () {
     const tasks = {
         toDo: [
@@ -44,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    // Array de cores correspondentes aos tags
     const tagColors = {
         IT: "#801E8F",
         JS: "#2E4B83",
