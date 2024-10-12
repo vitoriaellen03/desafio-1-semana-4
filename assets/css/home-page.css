@@ -25,9 +25,9 @@
 }
 
 #manager .subtitle {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 1.75rem;
 }
 
 .card-manager img {

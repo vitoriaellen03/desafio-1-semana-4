@@ -1,3 +1,4 @@
+// Validation Form Subscribe
 document.addEventListener("DOMContentLoaded", function () {
     const subscribeForm = document.getElementById("subscribeForm");
     const emailInput = document.getElementById("email");
@@ -32,22 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
         return isValid;
     }
 
-    // Valida ao digitar
     emailInput.addEventListener("input", validateForm);
     nameInput.addEventListener("input", validateForm);
 
-    // Valida ao enviar o formulário
     subscribeForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
         if (validateForm()) {
-            // Armazenar no LocalStorage
             localStorage.setItem("email", emailInput.value);
             localStorage.setItem("name", nameInput.value);
             successfulAlert.classList.add("sucess");
             successfulAlert.textContent = "Successful registration!";
 
-            // Exibir o alert por 5 segundos
             successfulAlert.style.display = "block";
 
             setTimeout(function () {

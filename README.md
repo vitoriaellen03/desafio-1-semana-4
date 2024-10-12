@@ -48,14 +48,10 @@ Clone o repositório e instale as dependências:
 
 ```bash
 git clone https://github.com/vitoriaellen03/desafio-1-semana-4.git
-cd desafio-1-semana-4
-```
+cd nome-do-projeto
 
 ## Iniciar o servidor local
-
-```bash
 npm start
-```
 
 ## Funcionalidades
 
