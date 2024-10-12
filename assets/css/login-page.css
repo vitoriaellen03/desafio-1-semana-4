@@ -1,5 +1,6 @@
 html {
-    overflow: hidden;
+    overflow: auto;
+    height: 100vh;
 }
 #login {
     flex-grow: 1;
