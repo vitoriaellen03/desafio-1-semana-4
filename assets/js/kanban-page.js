@@ -98,3 +98,54 @@ document.addEventListener("DOMContentLoaded", function () {
         completeContainer.appendChild(createCard(task));
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const kanbanBoard = document.querySelector('.kanban-board');
+
+    let isDragging = false;
+    let startX, scrollLeft;
+
+    // Para mouse
+    kanbanBoard.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        kanbanBoard.classList.add('active');
+        startX = e.pageX - kanbanBoard.offsetLeft;
+        scrollLeft = kanbanBoard.scrollLeft;
+    });
+
+    kanbanBoard.addEventListener('mouseleave', () => {
+        isDragging = false;
+        kanbanBoard.classList.remove('active');
+    });
+
+    kanbanBoard.addEventListener('mouseup', () => {
+        isDragging = false;
+        kanbanBoard.classList.remove('active');
+    });
+
+    kanbanBoard.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - kanbanBoard.offsetLeft;
+        const walk = (x - startX) * 2;
+        kanbanBoard.scrollLeft = scrollLeft - walk;
+    });
+
+    // Para toque em dispositivos móveis
+    kanbanBoard.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - kanbanBoard.offsetLeft;
+        scrollLeft = kanbanBoard.scrollLeft;
+    });
+
+    kanbanBoard.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    kanbanBoard.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX - kanbanBoard.offsetLeft;
+        const walk = (x - startX) * 2;
+        kanbanBoard.scrollLeft = scrollLeft - walk;
+    });
+});
