@@ -48,7 +48,7 @@ Clone o repositório e instale as dependências:
 
 ```bash
 git clone https://github.com/vitoriaellen03/desafio-1-semana-4.git
-cd nome-do-projeto
+cd desafio-1-semana-4
 ```
 
 ## Iniciar o servidor local
