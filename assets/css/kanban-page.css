@@ -142,10 +142,18 @@
     }
 
     .kanban-board {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
         width: 100%;
         gap: 20px;
+        overflow-y: auto;
+        overflow-x: auto;
+        cursor: grab;
+    }
+
+    .kanban-board:active {
+        cursor: grabbing;
     }
 
     .kanban-column {
